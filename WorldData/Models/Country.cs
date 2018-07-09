@@ -85,7 +85,7 @@ namespace WorldData.Models
           conn.Open();
           MySqlCommand cmd = conn.CreateCommand() as MySqlCommand;
           cmd.CommandText = @"SELECT Id, Name, Region, Population, GNP, LifeExpectancy FROM country WHERE LifeExpectancy <=" + userInput + " ORDER BY LifeExpectancy " + userOrder + ";";
-          MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
+          MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader; 
           while(rdr.Read())
           {
             int Id = rdr.GetInt32(0);
