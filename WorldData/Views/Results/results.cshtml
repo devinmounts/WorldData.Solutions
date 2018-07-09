@@ -1,0 +1,41 @@
+@{
+  Layout = "_Layout";
+}
+
+  <div class='container'>
+    <div class="row">
+      <div class="col-lg-6">
+        <h1>Country Data</h1>
+
+        @foreach(var country in Model)
+        {
+          <h3>@country.GetName()</h3>
+          <ul>
+            <li>Country Id: @country.GetId()</li>
+            <li>Region: @country.GetRegion()</li>
+            <li>Population: @country.GetPopulation()</li>
+            <li>Life Expectancy: @country.GetLifeExpectancy()</li>
+            <li>GNP: @country.GetGNP()</li>
+          </ul>
+        }
+      </div>
+      @* <div class="col-lg-6">
+        <h1>City Data</h1>
+
+        @foreach(var city in Model)
+        {
+          <h3>@city.GetName()</h3>
+          <ul>
+            <li>Country Id: @city.GetId()</li>
+            <li>Population: @city.GetCountry()</li>
+            <li>Life Expectancy: @city.GetPopulation()</li>
+          </ul>
+        }
+      </div> *@
+
+
+
+
+
+    </div>
+  </div>
